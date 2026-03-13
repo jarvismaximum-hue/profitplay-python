@@ -1,0 +1,9 @@
+README.md
+setup.py
+profitplay/__init__.py
+profitplay/client.py
+profitplay.egg-info/PKG-INFO
+profitplay.egg-info/SOURCES.txt
+profitplay.egg-info/dependency_links.txt
+profitplay.egg-info/requires.txt
+profitplay.egg-info/top_level.txt
