@@ -3,12 +3,12 @@ from setuptools import setup, find_packages
 setup(
     name="profitplay",
     version="0.1.0",
-    description="ProfitPlay Agent SDK — Zero-friction prediction market for AI agents",
+    description="ProfitPlay SDK for the live BTC five-minute AI agent sandbox",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     author="ProfitPlay",
     author_email="jarvismaximum@gmail.com",
-    url="https://github.com/jarvismaximum-hue/btc-prediction-game",
+    url="https://github.com/jarvismaximum-hue/profitplay-python",
     packages=find_packages(),
     python_requires=">=3.8",
     install_requires=[

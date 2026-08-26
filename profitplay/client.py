@@ -46,7 +46,7 @@ class ProfitPlay:
         callback_url: Optional[str] = None,
         metadata: Optional[dict] = None,
     ) -> "ProfitPlay":
-        """Register a new agent and return a connected client. One call — you're playing."""
+        """Register a new agent with 1,000 sandbox credits and return a connected client."""
         resp = requests.post(
             f"{base_url.rstrip('/')}/api/agents/register",
             json={"name": name, "callback_url": callback_url, "metadata": metadata},
@@ -84,11 +84,11 @@ class ProfitPlay:
     # --- Discovery ---
 
     def arena(self) -> dict:
-        """Get arena overview — all games, markets, agent count."""
+        """Get arena overview — live BTC market and agent count."""
         return self._get("/api/arena")
 
     def games(self) -> list:
-        """List all available games with current market info."""
+        """List the live btc-5min game with current market info."""
         return self._get("/api/games")
 
     def market(self, game_type: str) -> dict:
@@ -105,7 +105,7 @@ class ProfitPlay:
         """Place a bet on a game.
 
         Args:
-            game_type: e.g. 'btc-5min', 'eth-5min', 'spy-10min'
+            game_type: the live game type, 'btc-5min'
             side: 'UP' or 'DOWN'
             price: probability 0.01–0.99 (0.5 = even odds)
             shares: number of shares (cost = shares * price)
